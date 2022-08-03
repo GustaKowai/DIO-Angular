@@ -1,0 +1,72 @@
+<h1 class="text-success text-center">Angular.</h1>
+<div 
+  [ngStyle]="{background: count < 5 ? 'red':'green'}"
+  [ngClass]="{custom: count > 5}"
+>
+  <h2 class="text-center">Contador: {{count}}</h2>
+</div>
+<!-- Diretivas estruturais -->
+<h2 *ngIf="count > 7; else menor ">O contador passou de 7!!</h2>
+
+<ng-template #menor>
+  <h2>O contador é menor que 7</h2>
+</ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-6">
+  <li 
+      class="list-group-item"
+      *ngSwitchCase="3"
+  >
+    É igual a 3
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="5"
+  >
+    É igual a 5
+  </li><li 
+    class="list-group-item"
+    *ngSwitchCase="7"
+  >
+    É igual a 7
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="9"
+  >
+    É igual a 9
+  </li>
+  <li 
+    class="list-group-item"
+    *ngSwitchDefault
+  >
+    Hum...
+  </li>
+</ul>
+
+<ul class="list-group mx-auto col-6">
+  <li
+   class="list-group-item"
+   *ngFor="let pessoa of pessoas"
+  >
+
+  O nome da pessoa é {{pessoa.nome}} {{pessoa.sobrenome}}
+
+
+  </li>
+</ul>
+
+
+<div class="col-8 mx-auto">
+  <h3>{{nome}}</h3>
+  <button  class="btn btn-success" (click)="clicou('Gustavo')"> Clique </button>
+</div>
+
+<div class="col-4 mx-auto">
+  <input type="text" 
+    class="form-control" 
+    placeholder="digite alguma coisa."
+    [(ngModel)]= "text">
+    
+  <h4>Saida:{{text}}</h4>
+</div>
