@@ -5,19 +5,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MarcaTextoDirective } from './directives/marca-texto.directive';
+import { MarcaTextoDirective } from './shared/directives/marca-texto.directive';
+import { PeopleService } from './shared/services/people.service';
+import { ListPeopleComponent } from './shared/components/list-people/list-people.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarcaTextoDirective
+    MarcaTextoDirective,
+    ListPeopleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
