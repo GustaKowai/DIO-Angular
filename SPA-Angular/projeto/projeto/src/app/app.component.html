@@ -31,6 +31,7 @@
     É igual a 7
   </li>
   <li 
+    appMarcaTexto corDeFundo="black" corDoTexto="white"
     class="list-group-item"
     *ngSwitchCase="9"
   >
@@ -58,7 +59,7 @@
 
 
 <div class="col-8 mx-auto">
-  <h3>{{nome}}</h3>
+  <h3 appMarcaTexto corDeFundo="blue" corDoTexto="black">{{nome}}</h3>
   <button  class="btn btn-success" (click)="clicou('Gustavo')"> Clique </button>
 </div>
 
