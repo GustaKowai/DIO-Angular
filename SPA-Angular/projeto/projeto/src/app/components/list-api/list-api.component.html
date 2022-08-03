@@ -1,0 +1,16 @@
+<p>list-api works!</p>
+<section class="d-flex align-items-center justify-content-center flex-wrap">
+  <div class="card my-2 mx-2" style="width: 18rem;" *ngFor="let p of personagens">
+    <img [src]="p.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{p.name}}</h5>
+      <p class="card-text">{{p.location.name}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Status: {{ p.status }}</li>
+      <li class="list-group-item">Specie: {{ p.species }}</li>
+      <li class="list-group-item">Gender: {{p.gender}}</li>
+    </ul>
+  </div>
+  
+</section>
