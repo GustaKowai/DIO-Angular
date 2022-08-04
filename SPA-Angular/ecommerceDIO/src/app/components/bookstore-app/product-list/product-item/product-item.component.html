@@ -1,0 +1,19 @@
+<div class="card shadow-sm">
+  <img src="{{livro.image}}" alt="Capa do livro" class="bd-placeholder-img card-img-top" width="100%">
+  <div class="card-body">
+
+    <p class="card-text">Título: {{livro.title}}</p>
+    
+    <p class="card-text">{{livro.subtitle}}</p>
+    
+    <p class="card-text">{{livro.priceInNumber|currency: 'BRL'}}</p>
+    
+    <p class="card-text">isbn13: {{livro.isbn13}}</p>
+
+    <div class="btn-group">
+      <button class="btn btn-sm btn-primary">Comprar</button>
+      <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+    </div>
+
+  </div>
+</div>
